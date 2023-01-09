@@ -20,6 +20,7 @@ const { Todo, User } = require("./models");
 const todo = require("./models/todo");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
+//SET EJS AS VIEW ENGINE
 app.use(cookieParser("shh! some secrete string"));
 app.use(csrf("this_should_be_32_character_long", ["POST", "PUT", "DELETE"]));
 app.set("view engine", "ejs");
