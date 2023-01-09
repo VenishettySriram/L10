@@ -56,8 +56,6 @@ passport.use(
           }
         })
         .catch(() => {
-          return done(null, false, {
-            message: "Account doesn't exist for this mail",
           });
         });
     }
